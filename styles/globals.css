@@ -5,3 +5,58 @@
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   box-sizing: border-box;
 }
+.hlavnís {
+  background-color: #191d32;
+  height: 100vh;
+}
+.logo {
+  height: 70px;
+  margin: 10px;
+}
+.navbar {
+  display: flex;
+  justify-content: center;
+}
+.textn {
+  font-size: 200px;
+  color: #f8f7f9;
+  margin: 50px;
+}
+.text2 {
+  /* color: #baff29;*/
+  /* color: #944bbb;*/
+  /*color: #3da5d9;*/
+  color: #3da5d9;
+  font-weight: 5000;
+  width: 100%;
+  padding: 10px;
+}
+.container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px;
+}
+.inputy {
+  display: flex;
+  margin: 10px;
+  align-items: center;
+}
+.input {
+  border: 2px solid #3da5d9;
+  border-radius: 4px;
+  outline: 8px;
+  padding: 8px;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.17);
+  border-radius: 5px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #f8f7f9;
+}
+.input:focus {
+  border-color: #baff29;
+}
