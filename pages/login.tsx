@@ -5,13 +5,15 @@ type Props = {};
 export default function Login({}: Props) {
   const [form, setForm] = useState({ username: "", password: "" });
   return (
-    <div>
+    <>
       <form>
-        <label htmlFor="user-input">user name</label>
+        <div className="login-form">
+        <h1>Login</h1>
+        <label htmlFor="user-input"></label>
         <input
           id="user-input"
           type="text"
-          placeholder="username"
+          placeholder="Username"
           value={form.username}
           onChange={(e) =>
             setForm((form) => {
@@ -19,11 +21,12 @@ export default function Login({}: Props) {
             })
           }
         />
-        <label htmlFor="password-input">password</label>
+        <h1>Password</h1>
+        <label htmlFor="password-input"></label>
         <input
           id="password-input"
           type="password"
-          placeholder="username"
+          placeholder="Password"
           value={form.password}
           onChange={(e) =>
             setForm((form) => {
@@ -32,7 +35,8 @@ export default function Login({}: Props) {
           }
         />
         <button type="submit">odeslat</button>
+        </div>
       </form>
-    </div>
+    </>
   );
 }

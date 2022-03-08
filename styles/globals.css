@@ -60,3 +60,11 @@
 .input:focus {
   border-color: #baff29;
 }
+.login-form {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 170px;
+}
