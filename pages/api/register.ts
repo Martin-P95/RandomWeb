@@ -9,27 +9,27 @@ type Data = {
 type Body = {
   username: string;
   password: string;
+  passwordrepeat: string;
 };
-const login = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
+const register = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
   if (req.method === "POST") {
     const data: Body = req.body;
     const prisma = new PrismaClient();
 
-    const getUser: User | null = await prisma.user.findUnique({
-      where: {
+    const newUser: User = await prisma.user.create({
+      data: {
         username: data.username,
+        password: data.password,
       },
     });
 
-    if (getUser && getUser.password === data.password) {
-      const token = jwt.sign({ id: getUser.id }, process.env.JWT_SECRET!, {
-        expiresIn: "90d",
-      });
-      res.status(200).json({ token });
-    }
+    const token = jwt.sign({ id: newUser.id }, process.env.JWT_SECRET!, {
+      expiresIn: "90d",
+    });
+    res.status(200).json({ token });
   } else {
     // Handle any other HTTP method
   }
 };
 
-export default login;
+export default register;
