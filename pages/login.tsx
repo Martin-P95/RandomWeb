@@ -20,8 +20,9 @@ export default function Login({}: Props) {
       <div className="background">
         <form onSubmit={onSubmit}>
           <div className="login-form">
-            <h1 className="Nadpis">Login</h1>
-            <label htmlFor="user-input" className="LoginInput"></label>
+            <label htmlFor="user-input" className="Nadpis">
+              Login
+            </label>
             <input
               id="user-input"
               type="text"
@@ -33,8 +34,9 @@ export default function Login({}: Props) {
                 })
               }
             />
-            <h1>Password</h1>
-            <label htmlFor="password-input"></label>
+            <label htmlFor="password-input" className="Nadpis">
+              Password
+            </label>
             <input
               id="password-input"
               type="password"
