@@ -27,9 +27,9 @@
   /* color: #944bbb;*/
   /*color: #3da5d9;*/
   color: #3da5d9;
-  font-weight: 5000;
-  width: 100%;
   padding: 10px;
+  font-weight: 600;
+  width: 200px;
 }
 .container {
   display: flex;
@@ -43,6 +43,7 @@
   display: flex;
   margin: 10px;
   align-items: center;
+  width: 400px;
 }
 .input {
   border: 2px solid #3da5d9;
@@ -108,10 +109,28 @@
   font-size: 30px;
   font-weight: 700;
 }
-.login-form input {
+.login-form input,
+.login-formR input {
   padding: 7px;
   outline: none;
 }
 .login-form input:focus {
   border: 2px solid skyblue;
+}
+.Nad {
+  padding: 30px;
+  text-decoration: underline;
+  color: #191d32;
+}
+.login-formR {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #f8f7f9;
+  margin: auto;
+  height: 500px;
+  width: 400px;
+  border-radius: 20px;
+  gap: 10px;
 }

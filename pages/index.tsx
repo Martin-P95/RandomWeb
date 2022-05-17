@@ -6,22 +6,31 @@ import { useAuth } from "../context/auth.context";
 
 const Home: NextPage = () => {
   const { user } = useAuth();
-  console.log(user);
+  console.log(user && user.username);
 
   return (
     <>
       <div className="hlavnís">
         <div className="navbar">
           <img src="/LogoR.svg" alt="" className="logo" />
+          {user ? (
+            <div> Přihlášen jako:{user.username}</div>
+          ) : (
+            <div>Nejte přihlášen</div>
+          )}
         </div>
         <div className="container">
           <h1 className="textn">7</h1>
-          <div className="inputy">
-            <h3 className="text2">Zadejte číslo:</h3>
-            <input type="number" className="input" />
-            <h3 className="text2">Zadejte číslo:</h3>
-            <input type="number" className="input" />
-          </div>
+          <section>
+            <div className="inputy">
+              <label className="text2">Zadejte minimální číslo:</label>
+              <input type="number" className="input" />
+            </div>
+            <div className="inputy">
+              <label className="text2">Zadejte maximální číslo:</label>
+              <input type="number" className="input" />
+            </div>
+          </section>
         </div>
       </div>
     </>
