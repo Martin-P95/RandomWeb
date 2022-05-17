@@ -5,13 +5,23 @@ import styles from "../styles/Home.module.css";
 import { useAuth } from "../context/auth.context";
 
 const Home: NextPage = () => {
-  const { user } = useAuth();
+  const { user, signOut } = useAuth();
   console.log(user && user.username);
 
   return (
     <>
       <div className="hlavnís">
         <div className="navbar">
+          {user ? (
+            <button className="tlačítko" onClick={signOut}>
+              Odhlásit
+            </button>
+          ) : (
+            <a className="tlačítko" href="/login">
+              přihlásit
+            </a>
+          )}
+
           <img src="/LogoR.svg" alt="" className="logo" />
           {user ? (
             <div> Přihlášen jako:{user.username}</div>

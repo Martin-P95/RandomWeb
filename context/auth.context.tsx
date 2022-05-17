@@ -19,7 +19,7 @@ export const AuthProvider = ({ children }: any) => {
   const signIn = async () => {
     if (Cookies.get("token")) {
       axios.post("/api/auth").then((res) => {
-        setUser(res.data);
+        setUser(res.data.user);
       });
     }
   };
@@ -30,7 +30,11 @@ export const AuthProvider = ({ children }: any) => {
     window.location.reload();
   };
 
-  return <AuthContext.Provider value={{ user, signIn, signOut }}>{children}</AuthContext.Provider>;
+  return (
+    <AuthContext.Provider value={{ user, signIn, signOut }}>
+      {children}
+    </AuthContext.Provider>
+  );
 };
 
 export const useAuth = () => {
