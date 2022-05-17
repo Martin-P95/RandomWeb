@@ -13,20 +13,20 @@ const Home: NextPage = () => {
       <div className="hlavnís">
         <div className="navbar">
           {user ? (
-            <button className="tlačítko" onClick={signOut}>
+            <a className="login" onClick={signOut}>
               Odhlásit
-            </button>
+            </a>
           ) : (
-            <a className="tlačítko" href="/login">
+            <a className="login" href="/login">
               přihlásit
             </a>
           )}
 
           <img src="/LogoR.svg" alt="" className="logo" />
           {user ? (
-            <div> Přihlášen jako:{user.username}</div>
+            <div className="login2"> Přihlášen jako:{user.username}</div>
           ) : (
-            <div>Nejte přihlášen</div>
+            <div className="login2">Nejte přihlášen</div>
           )}
         </div>
         <div className="container">
@@ -40,6 +40,10 @@ const Home: NextPage = () => {
               <label className="text2">Zadejte maximální číslo:</label>
               <input type="number" className="input" />
             </div>
+          </section>
+          <section>
+            <button className="tlačítko">Vygenerovat číslo</button>
+            <button className="tlačítko">Uložit</button>
           </section>
         </div>
       </div>

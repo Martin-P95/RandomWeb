@@ -11,16 +11,15 @@
 }
 .logo {
   height: 70px;
-  margin: 10px;
 }
 .navbar {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }
 .textn {
   font-size: 200px;
   color: #f8f7f9;
-  margin: 50px;
+  margin: 30px;
 }
 .text2 {
   /* color: #baff29;*/
@@ -133,4 +132,7 @@
   width: 400px;
   border-radius: 20px;
   gap: 10px;
+}
+.login {
+  color: #3da5d9;
 }
