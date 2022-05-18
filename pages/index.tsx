@@ -13,7 +13,7 @@ const Home: NextPage = () => {
       <div className="hlavnís">
         <div className="navbar">
           {user ? (
-            <a className="login" onClick={signOut}>
+            <a className="login" onClick={signOut} href="\">
               Odhlásit
             </a>
           ) : (
@@ -24,7 +24,10 @@ const Home: NextPage = () => {
 
           <img src="/LogoR.svg" alt="" className="logo" />
           {user ? (
-            <div className="login2"> Přihlášen jako:{user.username}</div>
+            <a className="login2" href="\user">
+              {" "}
+              Přihlášen jako:{user.username}
+            </a>
           ) : (
             <div className="login2">Nejte přihlášen</div>
           )}

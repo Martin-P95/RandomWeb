@@ -108,6 +108,7 @@
   font-size: 30px;
   font-weight: 700;
 }
+
 .login-form input,
 .login-formR input {
   padding: 7px;
@@ -134,5 +135,8 @@
   gap: 10px;
 }
 .login {
+  color: #3da5d9;
+}
+.login2 {
   color: #3da5d9;
 }
