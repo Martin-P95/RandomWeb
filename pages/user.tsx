@@ -1,17 +1,29 @@
-import React from 'react'
+import React from "react";
 import { Number, PrismaClient } from "@prisma/client";
-type Props = {}
+import { GetServerSideProps } from "next";
+type Props = {
+  numbers: Array<Number>;
+};
 
-const prisma = new PrismaClient();
-export async function getServerSideProps(context) {
-    return {
-      props: {prisma}, 
-    }
-  }
-  
+export const getServerSideProps: GetServerSideProps = async (_context) => {
+  const prisma = new PrismaClient();
+  const numbers = await prisma.number.findMany();
+  return {
+    props: {
+      numbers,
+    },
+  };
+};
 
-export default function user({}: Props) {
+export default function user({ numbers }: Props) {
   return (
-    
-  )
+    <section className="backgroundU">
+      <h1 className="nadpisU">Vaše čísla</h1>
+      <section className="card">
+        {numbers.map((number) => (
+          <div key={number.id}>{number.number}</div>
+        ))}
+      </section>
+    </section>
+  );
 }
