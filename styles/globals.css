@@ -152,15 +152,35 @@
   border-radius: 20px;
   gap: 10px;
 }
-.backgroundU {
+.card2 {
   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #f8f7f9;
+  margin: auto;
+  padding: 30px;
+  width: 400px;
+  border-radius: 20px;
+  gap: 10px;
+  align-self: justify;
+}
+.backgroundU {
   background-color: #191d32;
   width: 100vw;
   height: 100vh;
 }
 .nadpisU {
+  text-align: center;
+  color: #f8f7f9;
+  padding: 65px;
+  font-weight: 700;
+  font-size: 35px;
+}
+.odejít {
+  text-align: center;
+  padding: 30px;
   display: flex;
   justify-content: center;
-
-  color: #f8f7f9;
+  color: #3da5d9;
 }

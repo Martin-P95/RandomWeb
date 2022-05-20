@@ -18,12 +18,17 @@ export const getServerSideProps: GetServerSideProps = async (_context) => {
 export default function user({ numbers }: Props) {
   return (
     <section className="backgroundU">
-      <h1 className="nadpisU">Vaše čísla</h1>
-      <section className="card">
-        {numbers.map((number) => (
-          <div key={number.id}>{number.number}</div>
+      <p className="nadpisU">Vaše čísla</p>
+      <section className="card2">
+        {numbers.map((number, index) => (
+          <div key={number.id}>
+            {index + 1}. {number.number}
+          </div>
         ))}
       </section>
+      <a href="/" className="odejít">
+        Odejít
+      </a>
     </section>
   );
 }
