@@ -5,7 +5,7 @@ import styles from "../styles/Home.module.css";
 import { useAuth } from "../context/auth.context";
 import { Number } from "@prisma/client";
 import { useState } from "react";
-import axios from "axios";
+import axios from "../lib/axios.client"
 
 const Home: NextPage = () => {
   const { user, signOut } = useAuth();
@@ -21,7 +21,7 @@ const Home: NextPage = () => {
     console.log(number);
   };
   const [cislo, setCislo] = useState(0);
-  const [min, setmin] = useState(0);
+  const [min, setmin] = useState(1);
   const [max, setmax] = useState(100);
   return (
     <>

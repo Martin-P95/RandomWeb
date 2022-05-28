@@ -164,6 +164,8 @@
   border-radius: 20px;
   gap: 10px;
   align-self: justify;
+  font-size: 20px;
+  font-weight: 500;
 }
 .backgroundU {
   background-color: #191d32;
@@ -179,8 +181,31 @@
 }
 .odejít {
   text-align: center;
-  padding: 30px;
+ padding: 10px;
   display: flex;
   justify-content: center;
   color: #3da5d9;
+}
+.delete
+{
+  margin: 5px;
+  padding: 12px 40px;
+  background-color: #122936;
+  border-radius: 20px;
+  border-style: none;
+  color: #fff;
+  font-size: 15px;
+  letter-spacing: 3px;
+  font-weight: 600;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.5s ease;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+}
+.delete:hover {
+  transition: all 0.5s ease;
+  transform: rotate(-3deg) scale(1.1);
+  box-shadow: 0px 3px 5px;
+  box-shadow: rgba(255, 255, 255, 0.15);
 }
