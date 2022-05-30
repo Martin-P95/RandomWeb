@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { Number, PrismaClient } from "@prisma/client";
 import { GetServerSideProps } from "next";
-import Link from 'next/link';
-import axios from "../lib/axios.client"
+import Link from "next/link";
+import axios from "../lib/axios.client";
 
 type Props = {
   numbers: Array<Number>;
@@ -18,20 +18,24 @@ export const getServerSideProps: GetServerSideProps = async (_context) => {
   };
 };
 
-export default function user({ numbers }: Props) {
- async function remove(id:number){
-await axios.post("/api/delete",{id});
+export default function User({ numbers }: Props) {
+  const [list, setList] = useState<Array<Number>>(numbers);
+  async function remove(id: number) {
+    await axios.post("/api/delete", { id }).then((res) => {
+      setList((l) => l.filter((n) => n.id !== id));
+    });
   }
   return (
     <section className="backgroundU">
       <p className="nadpisU">Vaše čísla</p>
       <section className="card2">
-        {numbers.map((number, index) => (
+        {list.map((number, index) => (
           <div key={number.id}>
             {index + 1}. {number.number}
-            <button onClick={()=>remove(number.id)} className="delete">Odebrat</button>
-            </div>
-          
+            <button onClick={() => remove(number.id)} className="delete">
+              Odebrat
+            </button>
+          </div>
         ))}
       </section>
       <Link href="/">
