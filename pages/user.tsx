@@ -30,11 +30,12 @@ export default function User({ numbers }: Props) {
       <p className="nadpisU">Vaše čísla</p>
       <section className="card2">
         {list.map((number, index) => (
-          <div key={number.id}>
-            {index + 1}. {number.number}
+          <div key={number.id} className="prvek">
+            {index + 1}: {number.number}
             <button onClick={() => remove(number.id)} className="delete">
-              Odebrat
+              <img src="trash-2.svg" alt="" />
             </button>
+            
           </div>
         ))}
       </section>

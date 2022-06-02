@@ -51,7 +51,7 @@ const Home: NextPage = () => {
           <h1 className="textn">{cislo}</h1>
           <section>
             <div className="inputy">
-              <label className="text2">Zadejte minimální číslo:</label>
+              <label className="text2">Zadejte první číslo:</label>
               <input
                 type="number"
                 className="input"
@@ -60,7 +60,7 @@ const Home: NextPage = () => {
               />
             </div>
             <div className="inputy">
-              <label className="text2">Zadejte maximální číslo:</label>
+              <label className="text2">Zadejte druhé číslo:</label>
               <input
                 type="number"
                 className="input"
