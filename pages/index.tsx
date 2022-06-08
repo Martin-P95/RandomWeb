@@ -41,7 +41,7 @@ const Home: NextPage = () => {
           {user ? (
             <a className="login2" href="\user">
               {" "}
-              Přihlášen jako:{user.username}
+              Čísla uživatele:{user.username}
             </a>
           ) : (
             <div className="login2">Nejte přihlášen</div>
@@ -69,7 +69,7 @@ const Home: NextPage = () => {
               />
             </div>
           </section>
-          <section>
+          <section className="tlacitka">
             <button
               className="tlačítko"
               onClick={() => setCislo(novecislo(min, max))}

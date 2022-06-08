@@ -171,8 +171,12 @@
 }
 .backgroundU {
   background-color: #191d32;
-  width: 100vw;
-
+  display: block;
+  min-height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0px;
 }
 .nadpisU {
   text-align: center;
@@ -221,3 +225,25 @@ right:-20px;
 }
 
 
+@media screen and (max-width:640px) {
+.tlacitka
+{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.tlačítko
+{
+  margin: 25px;
+  padding: 12px 40px;
+  background-color: #122936;
+  border-radius: 15px;
+  border-style: none;
+  color: #fff;
+  font-size: 17px;
+  letter-spacing: 3px;
+  font-weight: 400;
+  }
+
+  
+}
